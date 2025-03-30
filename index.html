@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テックチャレンジ | 大人のパソコン&プログラミング教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ヘッダー -->
+<header>
+<div class="container header-content">
+  <a href="#" class="logo">
+    <img src="https://placehold.jp/2c8d6a/ffffff/300x60.png?text=TechChallenge" alt="テックチャレンジ | 大人のパソコン&プログラミング教室">
+  </a>
+  
+  <button class="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+  
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#intro">サービス紹介</a></li>
+      <li><a href="#recommendations">こんな方にオススメ</a></li>
+      <li><a href="#courses">学習内容</a></li>
+      <li><a href="#features">当教室の特長</a></li>
+      <li><a href="#flow">受講の流れ</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<!-- メインビジュアル -->
+<section class="main-visual">
+<div class="container catch-copy">
+  <p class="text1"><span>あなた専用</span>のカリキュラムで、<br>ITに強くなろう！</p>
+  <p class="text2">大人のパソコン＆プログラミング教室</p>
+</div>
+</section>
+
+<!-- イントロダクション（簡潔版） -->
+<section id="intro" class="content-section">
+  <div class="container">
+    <h2 class="section-title">完全マンツーマンで、あなたのペースに合わせたITスキルを習得</h2>
+    
+    <div class="additional-text">
+      <p>テックチャレンジは、<strong>「誰でも、いつからでも、ITスキルを習得できる」</strong>をモットーにした大人のためのパソコン＆プログラミング教室です。Wordやエクセルの基本からプログラミングまで、あなたのレベルに合わせて指導します。</p>
+      
+      <p><strong>一人ひとりに寄り添った学習サポート</strong>と<strong>実践的なスキル習得</strong>にこだわっています。マンツーマンだからこそ質問しやすく、自分のペースで学べます。また、Excelでの家計簿作成やWebサイト制作など、実際に使えるスキルを身につけられます。</p>
+      
+      <p>初回無料相談では、あなたの目標やスキルレベルをヒアリングし、最適な学習プランをご提案します。ITスキルの習得を通じて、新たな可能性を広げてみませんか？</p>
+    </div>
+  </div>
+  </section>
+
+
+<!-- こんな人にオススメ -->
+<section id="recommendations" class="content-section">
+<div class="container">
+  <div class="decoration decoration-1"></div>
+  <h3 class="heading-accent">こんな人にオススメ</h3>
+  
+  <div class="card-container">
+    <div class="card">
+      <div class="card-icon">
+        <i class="fas fa-laptop"></i>
+      </div>
+      <p class="card-title">パソコンを基礎から学びたい</p>
+      <div class="card-body">
+        <p>Wordで文書作成、Excelで表計算や関数、PowerPointでスライド作成やプレゼンテーションの基礎まで、仕事や日常で役立つスキルを一から習得できます。</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <p class="card-title">仕事に役立つスキルを身につけたい</p>
+      <div class="card-body">
+        <p>業務効率化を目指す方に！ExcelのVBAを使って作業を自動化。GoogleスプレッドシートやGAS（Google Apps Script）を活用すれば、クラウドでデータ管理や自動計算ができるようになり、仕事の生産性が大幅に向上します。</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-icon">
+        <i class="fas fa-globe"></i>
+      </div>
+      <p class="card-title">副業や趣味でWeb制作に挑戦したい</p>
+      <div class="card-body">
+        <p>自分のWebサイトやブログを作りたい方に！WordPressでサイトの立ち上げ、Canvaを使ってデザインをおしゃれにカスタマイズ。HTMLとCSSの基礎を学べば、レイアウトやデザインの自由度がアップし、オリジナリティのあるサイトが作れます。</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <p class="card-title">プログラミングをゼロから学びたい</p>
+      <div class="card-body">
+        <p>プログラミング未経験でもOK！JavaScriptが使えればWebサイトに動きを加え、PHPを学べば会員登録やお問い合わせフォームなどの機能を開発できます。Pythonはデータ分析やAI開発にも活用でき、将来的に広い分野で役立つスキルです。</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-icon">
+        <i class="fas fa-user-clock"></i>
+      </div>
+      <p class="card-title">自分のペースで学びたい</p>
+      <div class="card-body">
+        <p>「集団授業だとついていけるか不安…」という方も安心！完全マンツーマンだから、わからないところはその場ですぐに質問OK。学ぶペースも自由に調整できるので、忙しい方やじっくり学びたい方にもぴったりです。</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-icon">
+        <i class="fas fa-award"></i>
+      </div>
+      <p class="card-title">資格取得を目指したい</p>
+      <div class="card-body">
+        <p>MOS資格やITパスポートなど、就職や転職に役立つ資格取得をサポート。あなたのレベルに合わせた学習計画を立て、効率的に試験対策を進めていくことができます。資格取得後のスキルの活かし方まで丁寧にアドバイスします。</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 当教室の特長（簡潔版） -->
+<section id="features" class="content-section">
+  <div class="container">
+    <div class="decoration decoration-2"></div>
+    <h3 class="heading-accent">当教室の特長</h3>
+    
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="feature-content">
+          <p class="feature-title">完全<strong>マンツーマン指導</strong></p>
+          <p class="feature-desc">あなた専用のカリキュラムでじっくり学べる！個人の理解度やペースに合わせた指導で、効率的かつ確実にスキルアップできます。「分からない」をそのままにせず、理解できるまで丁寧に説明します。</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="feature-content">
+          <p class="feature-title"><strong>学習スケジュール自由</strong></p>
+          <p class="feature-desc">週1回から短期集中まで、あなたのライフスタイルに合わせて調整OK！仕事や家事で忙しい方でも無理なく続けられます。予定変更やお休みの際も、24時間前までのご連絡で振替可能です。</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-video"></i>
+        </div>
+        <div class="feature-content">
+          <p class="feature-title"><strong>対面 or オンライン選択可</strong></p>
+          <p class="feature-desc">最初は対面でじっくり、慣れたらオンライン受講もOK！状況に応じて柔軟に学習スタイルを変更できます。対面では直接指導、オンラインでは画面共有で、どちらも質の高いレッスンを提供します。</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <div class="feature-content">
+          <p class="feature-title"><strong>柔軟なお支払い方法</strong></p>
+          <p class="feature-desc">現金・クレジットカード・銀行振込など、お好みの方法で支払いが可能！レッスンは都度払いと回数券（4回・8回）から選択可能です。長期学習には、お得な月額制プランもご用意しています。</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-comments"></i>
+        </div>
+        <div class="feature-content">
+          <p class="feature-title"><strong>まずは無料相談から！</strong></p>
+          <p class="feature-desc">あなたにピッタリの学習プランをご提案します！目標や予算、スケジュールに合わせて最適なコースをご紹介いたします。無料相談は対面またはオンラインで約60分、相談後の受講義務はありません。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+
+<!-- 学習コース・内容紹介（修正版） -->
+<section id="courses" class="content-section">
+  <div class="container">
+    <h3 class="heading-accent">学習できるソフト・言語</h3>
+    
+    <p class="intro-text"><span class="beginner-emphasis">初心者の方でも安心して学べる</span>ソフトウェアやプログラミング基礎を中心にご紹介します。<br>一人ひとりの目的やレベルに合わせて、無理なく学習を進めていきます。</p>
+    
+    <div class="tabs">
+      <div class="tab-header">
+        <div class="tab-btn active" data-tab="office">
+          <i class="fas fa-file-alt"></i>
+          <span>オフィスソフト</span>
+        </div>
+        <div class="tab-btn" data-tab="web">
+          <i class="fas fa-globe"></i>
+          <span>Web基礎</span>
+        </div>
+        <div class="tab-btn" data-tab="programming">
+          <i class="fas fa-code"></i>
+          <span>プログラミング入門</span>
+        </div>
+        <div class="tab-btn" data-tab="design">
+          <i class="fas fa-paint-brush"></i>
+          <span>デザイン入門</span>
+        </div>
+      </div>
+      
+      <div class="tab-content">
+        <div class="tab-pane active" id="office">
+          <div class="course-icons">
+            <div class="course-icon">
+              <img src="https://placehold.jp/3d4070/ffffff/80x80.png?text=Word" alt="Microsoft Word">
+              <span>Word</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/217346/ffffff/80x80.png?text=Excel" alt="Microsoft Excel">
+              <span>Excel</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/b7472a/ffffff/80x80.png?text=PowerPoint" alt="Microsoft PowerPoint">
+              <span>PowerPoint</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/0f9d58/ffffff/80x80.png?text=Sheets" alt="Google Sheets">
+              <span>Google Sheets</span>
+            </div>
+          </div>
+          <div class="course-level">
+            <h4>レベル別コース内容</h4>
+            <div class="level-item">
+              <span class="level-badge beginner">初級</span>
+              <p><strong>基本操作・文書作成・表計算の基礎・プレゼン資料作成など</strong>（特に初めての方におすすめ）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge intermediate">中級</span>
+              <p>関数・ピボットテーブル・効率的な資料作成など（ある程度使ったことがある方向け）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge advanced">上級</span>
+              <p>マクロ入門・Google Apps Scriptの基礎（さらに便利に使いたい方向け）</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane" id="web">
+          <div class="course-icons">
+            <div class="course-icon">
+              <img src="https://placehold.jp/e44d26/ffffff/80x80.png?text=HTML" alt="HTML">
+              <span>HTML</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/264de4/ffffff/80x80.png?text=CSS" alt="CSS">
+              <span>CSS</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/21759b/ffffff/80x80.png?text=WP" alt="WordPress">
+              <span>WordPress</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/777bb3/ffffff/80x80.png?text=PHP" alt="PHP">
+              <span>PHP</span>
+            </div>
+          </div>
+          <div class="course-level">
+            <h4>レベル別コース内容</h4>
+            <div class="level-item">
+              <span class="level-badge beginner">初級</span>
+              <p><strong>HTMLとCSSの基礎・簡単なWebページ作成</strong>（未経験者でも安心して始められます）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge intermediate">中級</span>
+              <p>WordPressでのブログ・サイト構築・PHPの基礎（自分のWebサイトを作りたい方向け）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge advanced">上級</span>
+              <p>WordPressのカスタマイズ・レスポンシブデザイン（サイトをもっと充実させたい方向け）</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane" id="programming">
+          <div class="course-icons">
+            <div class="course-icon">
+              <img src="https://placehold.jp/366c9c/ffffff/80x80.png?text=Python" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/f89820/ffffff/80x80.png?text=JavaScript" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+          </div>
+          <div class="course-level">
+            <h4>レベル別コース内容</h4>
+            <div class="level-item">
+              <span class="level-badge beginner">初級</span>
+              <p><strong>プログラミングの基礎概念・変数・条件分岐・繰り返し</strong>（プログラミングが初めての方向け）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge intermediate">中級</span>
+              <p>簡単なアプリ作成・基本的なデータ処理（基礎を理解した方向け）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge advanced">上級</span>
+              <p>小規模プロジェクトの作成（趣味や副業に活かしたい方向け）</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane" id="design">
+          <div class="course-icons">
+            <div class="course-icon">
+              <img src="https://placehold.jp/00c4cc/ffffff/80x80.png?text=Canva" alt="Canva">
+              <span>Canva</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/31a8ff/ffffff/80x80.png?text=Photoshop" alt="Adobe Photoshop">
+              <span>Photoshop</span>
+            </div>
+            <div class="course-icon">
+              <img src="https://placehold.jp/ff9a00/ffffff/80x80.png?text=Illustrator" alt="Adobe Illustrator">
+              <span>Illustrator</span>
+            </div>
+          </div>
+          <div class="course-level">
+            <h4>レベル別コース内容</h4>
+            <div class="level-item">
+              <span class="level-badge beginner">初級</span>
+              <p><strong>Canvaを使った簡単なデザイン・基本的な画像編集</strong>（デザイン初心者の方向け）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge intermediate">中級</span>
+              <p>Illustratorの基礎・バナーやチラシ作成・SNS投稿用画像の作成（もっとおしゃれに作りたい方向け）</p>
+            </div>
+            <div class="level-item">
+              <span class="level-badge advanced">上級</span>
+              <p>Photoshopの基礎・実用的なデザイン制作（本格的に学びたい方向け）</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-- 受講の流れ -->
+<section id="flow" class="content-section">
+<div class="container">
+  <h3 class="heading-accent">受講の流れ</h3>
+  
+  <div class="flow-list">
+    <div class="flow-item" data-step="1">
+      <strong>まずは無料相談を予約</strong>
+      <p class="flow-desc">あなたの目的や学びたいこと、現在のスキルレベルなどをヒアリングします。完全予約制で、あなたの都合の良い日時に設定できます。</p>
+    </div>
+    
+    <div class="flow-item" data-step="2">
+      <strong>最適なカリキュラムを提案</strong>
+      <p class="flow-desc">ヒアリング内容をもとに、あなた専用のカリキュラムをご提案。完全マンツーマンだから無駄なく効率的に学べます。</p>
+    </div>
+    
+    <div class="flow-item" data-step="3">
+      <strong>レッスン開始！</strong>
+      <p class="flow-desc">対面またはオンラインで、週1回〜短期集中まで自由に調整OK。あなたのペースで着実にスキルアップしていきましょう。</p>
+    </div>
+    
+    <div class="flow-item" data-step="4">
+      <strong>スキルアップを実感！</strong>
+      <p class="flow-desc">分からないところはその場で解決！定期的に学習の進捗を確認し、必要に応じてカリキュラムを調整していきます。</p>
+    </div>
+  </div>
+  
+<!-- 魅力的な相談プロモーションHTML -->
+<div class="promotion-box">
+  <span class="promo-badge">🎁 期間限定オファー</span>
+  
+  <div class="promotion-inner">
+    <h4 class="promo-title">今だけ！無料カウンセリング実施中</h4>
+    <p class="promo-subtitle">あなたのITスキルアップを全力サポート。まずは気軽に無料相談からスタート！</p>
+    
+    <div class="promo-features">
+      <div class="promo-feature">
+        <i class="fas fa-check-circle"></i>
+        <p class="promo-feature-title">60分じっくり相談</p>
+        <p>目標や現状をヒアリング</p>
+      </div>
+      
+      <div class="promo-feature">
+        <i class="fas fa-file-alt"></i>
+        <p class="promo-feature-title">学習プラン提案</p>
+        <p>あなた専用カリキュラム</p>
+      </div>
+      
+      <div class="promo-feature">
+        <i class="fas fa-coins"></i>
+        <p class="promo-feature-title">入会金¥10,000が無料</p>
+        <p>今月末までの申込限定</p>
+      </div>
+    </div>
+    
+    <a href="reservation-form.html" class="cta-button">
+      <i class="fas fa-calendar-check"></i> 無料相談を予約する（所要時間3分）
+    </a>
+    
+    <p class="satisfaction-guarantee">
+      <i class="fas fa-shield-alt"></i> 相談後の入会義務は一切ありません。お気軽にご予約ください。
+    </p>
+    
+    <!-- <div class="testimonial">
+      <p class="testimonial-text">「パソコンが苦手で不安でしたが、無料相談で具体的なプランを示してもらえたのが決め手でした。今では仕事でExcelを使いこなせるようになり、自信がつきました！」</p>
+      <p class="testimonial-author">40代女性・会社員</p>
+    </div> -->
+  </div>
+</div>
+</div>
+</section>
+
+<!-- 教室情報と地図 -->
+<section id="access" class="content-section">
+<div class="container">
+  <h3 class="heading-accent">教室情報・アクセス</h3>
+  
+  <div class="access-content">
+    <div class="access-info">
+      <div class="access-details">
+        <h4><i class="fas fa-map-marker-alt"></i> 所在地</h4>
+        <p>〒123-4567<br>東京都新宿区新宿1-2-3 テックビル 5階</p>
+        
+        <h4><i class="fas fa-subway"></i> アクセス</h4>
+        <p>JR新宿駅 東口より徒歩5分<br>地下鉄新宿三丁目駅 A2出口より徒歩3分</p>
+        
+        <h4><i class="fas fa-clock"></i> 営業時間</h4>
+        <p>平日: 10:00〜21:00<br>土日祝: 10:00〜18:00</p>
+        
+        <h4><i class="fas fa-phone-alt"></i> お問い合わせ</h4>
+        <p>TEL: 03-1234-5678<br>Email: info@tech-challenge.example.com</p>
+      </div>
+    </div>
+    
+    <div class="access-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030689812!2d139.7001288!3d35.6897938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd4b71a37a1%3A0xf1665c37f38661e8!2Z5paw5a6_6aeF!5e0!3m2!1sja!2sjp!4v1710635195317!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- フッター -->
+<footer>
+<div class="container">
+  <div class="footer-content">
+    <div class="footer-info">
+      <div class="footer-logo">テックチャレンジ</div>
+      <p class="footer-desc">初心者から上級者まで、あなたのITスキルアップを全力でサポートします。マンツーマン指導で確実にスキルを身につけましょう。</p>
+    </div>
+    
+    <div class="footer-nav">
+      <div class="footer-kids-info">
+        <h4><i class="fas fa-child"></i> 子供向けプログラミング教室も開講中！</h4>
+        <p>小学生・中学生向けのプログラミング教室も運営しています。<br>楽しみながら論理的思考力を身につけるカリキュラムをご用意。</p>
+        <a href="#" class="footer-kids-link">子供向け教室の詳細はこちら <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <a href="reservation-form.html">相談予約フォーム</a> | <a href="privacy-policy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p class="copyright">© 2025 テックチャレンジ | 大人のパソコン&プログラミング教室 All Rights Reserved.</p>
+  </div>
+</div>
+</footer>
+
+<!-- トップへ戻るボタン -->
+<div id="back-to-top" class="back-to-top">
+  <a href="#" aria-label="ページトップへ戻る">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

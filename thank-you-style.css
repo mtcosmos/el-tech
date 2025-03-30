@@ -1,0 +1,181 @@
+/* サンキューページ用のスタイル */
+.thank-you-message {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.success-icon {
+  margin: 20px auto;
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(44, 141, 106, 0.3);
+}
+
+.success-icon i {
+  font-size: 40px;
+  color: white;
+}
+
+/* 大きいアイコン用の追加スタイル */
+.success-icon-large {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.success-icon-large i {
+  font-size: 50px !important;
+}
+
+.message-text {
+  font-size: 1.2rem;
+  color: var(--heading);
+  margin: 20px 0;
+}
+
+.submission-details {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.submission-details h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  font-size: 1.3rem;
+}
+
+.note-box {
+  background-color: #f0f7f4;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 30px auto 0;
+  max-width: 600px;
+}
+
+.note-box p {
+  font-size: 0.95rem;
+  color: var(--light-text);
+}
+
+.note-box i {
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+/* メール送信結果メッセージのスタイル */
+.success-message {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.warning-message {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.note-box i.fa-info-circle {
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+.note-box i.fa-exclamation-triangle {
+  color: #e74c3c;
+  margin-right: 8px;
+}
+
+/* メール送信状態バナー */
+.email-status-banner {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-success {
+  background-color: #e3f7e9;
+  border-left: 5px solid var(--primary);
+  color: var(--primary);
+}
+
+.email-warning {
+  background-color: #ffe6e6;
+  border-left: 5px solid #e74c3c;
+  color: #c0392b;
+}
+
+.email-status-banner i {
+  font-size: 1.6rem;
+  margin-right: 15px;
+}
+
+/* エラー表示のスタイル */
+.error-message {
+  background-color: #ffe6e6;
+  border-left: 4px solid #e74c3c;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #c0392b;
+}
+
+.error-message i {
+  margin-right: 10px;
+}
+
+/* thank-you-style.css に追加するスタイル */
+
+/* エラー時の電話お問い合わせ案内ボックス */
+.contact-info-box {
+  background-color: #ffe6e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.1);
+}
+
+.contact-info-box h3 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.contact-info-box p {
+  margin-bottom: 10px;
+}
+
+.contact-info-box strong {
+  font-size: 1.3rem;
+  color: #e74c3c;
+}
+
+.contact-info-box i {
+  color: #e74c3c;
+  margin-right: 8px;
+}
+
+/* エラーアイコン */
+.warning-icon {
+  background-color: #e74c3c !important;
+}
+
+.warning-icon i {
+  color: white;
+}
+
+/* メッセージタイプ */
+.warning-message {
+  color: #c0392b !important;
+  font-weight: 500;
+}

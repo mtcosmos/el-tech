@@ -1,0 +1,737 @@
+/* 日時選択セクション用の追加スタイル */
+.section-title {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.section-intro {
+  color: var(--light-text);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.preference-container {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.preference-title {
+  margin-bottom: 15px;
+  color: var(--heading);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.preference-title::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.date-time-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.date-time-group .form-control {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* エラー表示 */
+.error {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2) !important;
+}
+
+.form-checkbox.error label {
+  color: #e74c3c;
+}
+
+/* 確認セクション用のスタイル */
+.confirmation-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.confirmation-item {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.confirmation-item:last-child {
+  border-bottom: none;
+}
+
+.confirmation-label {
+  width: 150px;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+.confirmation-value {
+  flex: 1;
+}
+
+.date-preference {
+  background-color: #f0f7f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.date-preference:last-child {
+  margin-bottom: 0;
+}
+
+.date-preference-title {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-step {
+    font-size: 0.8rem;
+    padding: 10px 5px;
+  }
+
+  .form-step i {
+    display: none;
+  }
+
+  .benefit-item {
+    flex: 1 0 100%;
+  }
+  
+  .date-time-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .date-time-group .form-control {
+    min-width: 100%;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  .confirmation-item {
+    flex-direction: column;
+  }
+  
+  .confirmation-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}/* 予約フォーム専用のスタイル */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+.form-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-intro h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.form-intro p {
+  color: var(--light-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-step {
+  flex: 1;
+  text-align: center;
+  padding: 15px 5px;
+  background-color: var(--light-bg);
+  position: relative;
+}
+
+.form-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-bg);
+  transform: translateY(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.form-step.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.form-step.active::after {
+  background-color: var(--primary);
+}
+
+.form-step i {
+  margin-right: 5px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+.form-control label.required::after {
+  content: '*';
+  color: #e74c3c;
+  margin-left: 5px;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.form-control textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-control input:focus,
+.form-control select:focus,
+.form-control textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(44, 141, 106, 0.2);
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group .form-control {
+  flex: 1;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form-checkbox input {
+  margin-top: 5px;
+  margin-right: 10px;
+  width: auto;
+}
+
+.form-checkbox label {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+.form-checkbox a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(44, 141, 106, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #25725a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(44, 141, 106, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--light-bg);
+  color: var(--heading);
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.page-header {
+  background-color: var(--primary);
+  padding: 40px 0;
+  margin-top: 80px;
+  color: white;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  background-color: var(--light-bg);
+  padding: 10px 0;
+}
+
+.breadcrumb-inner {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  color: var(--light-text);
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--light-text);
+}
+
+.form-benefits {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.form-benefits h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.benefit-item {
+  flex: 1 0 30%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.benefit-item i {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-right: 10px;
+}
+/* 確認セクション用のスタイル */
+.confirmation-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.confirmation-item {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.confirmation-item:last-child {
+  border-bottom: none;
+}
+
+.confirmation-label {
+  width: 150px;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+.confirmation-value {
+  flex: 1;
+}
+
+.date-preference {
+  background-color: #f0f7f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.date-preference:last-child {
+  margin-bottom: 0;
+}
+
+.date-preference-title {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-step {
+    font-size: 0.8rem;
+    padding: 10px 5px;
+  }
+
+  .form-step i {
+    display: none;
+  }
+
+  .benefit-item {
+    flex: 1 0 100%;
+  }
+  
+  .date-time-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .date-time-group .form-control {
+    min-width: 100%;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  .confirmation-item {
+    flex-direction: column;
+  }
+  
+  .confirmation-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}/* 予約フォーム専用のスタイル */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+.form-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-intro h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.form-intro p {
+  color: var(--light-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-step {
+  flex: 1;
+  text-align: center;
+  padding: 15px 5px;
+  background-color: var(--light-bg);
+  position: relative;
+}
+
+.form-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-bg);
+  transform: translateY(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.form-step.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.form-step.active::after {
+  background-color: var(--primary);
+}
+
+.form-step i {
+  margin-right: 5px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+.form-control label.required::after {
+  content: '*';
+  color: #e74c3c;
+  margin-left: 5px;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.form-control textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-control input:focus,
+.form-control select:focus,
+.form-control textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(44, 141, 106, 0.2);
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group .form-control {
+  flex: 1;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form-checkbox input {
+  margin-top: 5px;
+  margin-right: 10px;
+  width: auto;
+}
+
+.form-checkbox label {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+.form-checkbox a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(44, 141, 106, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #25725a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(44, 141, 106, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--light-bg);
+  color: var(--heading);
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.page-header {
+  background-color: var(--primary);
+  padding: 40px 0;
+  margin-top: 80px;
+  color: white;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  background-color: var(--light-bg);
+  padding: 10px 0;
+}
+
+.breadcrumb-inner {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  color: var(--light-text);
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--light-text);
+}
+
+.form-benefits {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.form-benefits h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.benefit-item {
+  flex: 1 0 30%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.benefit-item i {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-right: 10px;
+}

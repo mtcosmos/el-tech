@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料相談予約 | テックチャレンジ | 大人のパソコン&プログラミング教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="reservation-style.css">
+</head>
+<body>
+<!-- ヘッダー -->
+<header>
+<div class="container header-content">
+  <a href="index.html" class="logo">
+    <img src="https://placehold.jp/2c8d6a/ffffff/300x60.png?text=TechChallenge" alt="テックチャレンジ | 大人のパソコン&プログラミング教室">
+  </a>
+  
+  <button class="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+  
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html#intro">サービス紹介</a></li>
+      <li><a href="index.html#recommendations">こんな方にオススメ</a></li>
+      <li><a href="index.html#courses">学習内容</a></li>
+      <li><a href="index.html#features">当教室の特長</a></li>
+      <li><a href="index.html#flow">受講の流れ</a></li>
+      <li><a href="index.html#access">アクセス</a></li>
+      <li><a href="reservation-form.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<!-- ページヘッダー -->
+<section class="page-header">
+  <div class="container">
+    <h1 class="page-title">無料相談予約</h1>
+    <p>あなたの目標に合わせた学習プランをご提案します</p>
+  </div>
+</section>
+
+<!-- パンくずリスト -->
+<div class="breadcrumb">
+  <div class="container breadcrumb-inner">
+    <a href="index.html">ホーム</a>
+    <i class="fas fa-chevron-right"></i>
+    <span>無料相談予約</span>
+  </div>
+</div>
+
+<!-- メインコンテンツ -->
+<section class="content-section">
+  <div class="container">
+    <div class="form-container">
+      <div class="form-intro">
+        <h2>60分の無料カウンセリングをご予約</h2>
+        <p>あなたの目標やスキルレベルをヒアリングし、最適な学習プランをご提案します。お気軽にご予約ください。</p>
+      </div>
+
+      <!-- エラーメッセージ表示エリア -->
+      <div id="error-container" style="display: none;" class="error-message">
+        <p><i class="fas fa-exclamation-circle"></i> 入力内容に不備があります。必須項目をご確認ください。</p>
+      </div>
+
+      <!-- 特典セクション -->
+      <div class="form-benefits">
+        <h3><i class="fas fa-gift"></i> 無料カウンセリングの特典</h3>
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <p>学習プラン提案が無料</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <p>60分じっくり相談</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <p>入会金10,000円が無料</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <p>体験レッスン割引券進呈</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <p>受講義務は一切なし</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-check-circle"></i>
+            <p>オンライン相談も可能</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- フォームステップ表示 -->
+      <div class="form-steps">
+        <div class="form-step active">
+          <i class="fas fa-user"></i> 基本情報
+        </div>
+        <div class="form-step">
+          <i class="fas fa-calendar-alt"></i> 希望日時
+        </div>
+        <div class="form-step">
+          <i class="fas fa-check-circle"></i> 確認・送信
+        </div>
+      </div>
+
+      <!-- 予約フォーム -->
+      <form id="reservation-form" action="process-reservation.php" method="post">
+        <!-- 基本情報のフィールド -->
+        <div id="basic-info">
+          <div class="form-group">
+            <div class="form-control">
+              <label for="last-name" class="required">姓</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-control">
+              <label for="first-name" class="required">名</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-control">
+              <label for="email" class="required">メールアドレス</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-control">
+              <label for="phone" class="required">電話番号</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label for="age-group">年齢層</label>
+            <select id="age-group" name="age-group">
+              <option value="">選択してください</option>
+              <option value="10s">10代</option>
+              <option value="20s">20代</option>
+              <option value="30s">30代</option>
+              <option value="40s">40代</option>
+              <option value="50s">50代</option>
+              <option value="60s">60代以上</option>
+            </select>
+          </div>
+
+          <div class="form-control">
+            <label for="interest" class="required">ご興味のある内容</label>
+            <select id="interest" name="interest" required>
+              <option value="">選択してください</option>
+              <option value="office">オフィスソフト（Word, Excel, PowerPoint など）</option>
+              <option value="web">Web基礎（HTML, CSS, WordPress など）</option>
+              <option value="programming">プログラミング入門（Python, JavaScript など）</option>
+              <option value="design">デザイン入門（Canva, Photoshop など）</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-control">
+            <label for="experience" class="required">現在のスキルレベル</label>
+            <select id="experience" name="experience" required>
+              <option value="">選択してください</option>
+              <option value="beginner">初心者（経験なし）</option>
+              <option value="basic">基礎レベル（少し使ったことがある）</option>
+              <option value="intermediate">中級者（趣味や仕事で使用経験あり）</option>
+              <option value="advanced">上級者（さらなるスキルアップを目指したい）</option>
+            </select>
+          </div>
+
+          <div class="form-control">
+            <label for="consultation-type" class="required">相談方法</label>
+            <select id="consultation-type" name="consultation-type" required>
+              <option value="">選択してください</option>
+              <option value="in-person">対面で相談したい</option>
+              <option value="online">オンラインで相談したい</option>
+            </select>
+          </div>
+
+          <div class="form-control">
+            <label for="message">ご質問・ご要望（任意）</label>
+            <textarea id="message" name="message" placeholder="学習の目的、ご質問など、ご自由にお書きください"></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+            <label for="privacy-policy" class="required"><a href="privacy-policy.html" target="_blank">プライバシーポリシー</a>に同意します</label>
+          </div>
+
+          <div class="form-actions">
+            <!-- ここにIDを追加し、typeをbuttonに変更 -->
+            <button type="button" id="go-to-step2" class="btn btn-primary">希望日時の選択へ進む <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 希望日時選択セクション -->
+        <div id="date-time-selection" style="display: none;">
+          <h3 class="section-title">希望日時の選択</h3>
+          <p class="section-intro">以下から希望する日時を3つまでお選びください。ご希望に沿えるよう調整いたします。</p>
+          
+          <!-- 第1希望 -->
+          <div class="preference-container">
+            <h4 class="preference-title">第1希望</h4>
+            <div class="form-group date-time-group">
+              <div class="form-control">
+                <label for="date1-year" class="required">年</label>
+                <select id="date1-year" name="date1-year" required>
+                  <option value="">選択</option>
+                  <option value="2025">2025年</option>
+                  <option value="2026">2026年</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date1-month" class="required">月</label>
+                <select id="date1-month" name="date1-month" required>
+                  <option value="">選択</option>
+                  <option value="1">1月</option>
+                  <option value="2">2月</option>
+                  <option value="3">3月</option>
+                  <option value="4">4月</option>
+                  <option value="5">5月</option>
+                  <option value="6">6月</option>
+                  <option value="7">7月</option>
+                  <option value="8">8月</option>
+                  <option value="9">9月</option>
+                  <option value="10">10月</option>
+                  <option value="11">11月</option>
+                  <option value="12">12月</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date1-day" class="required">日</label>
+                <select id="date1-day" name="date1-day" required>
+                  <option value="">選択</option>
+                  <!-- 日付はJavaScriptで動的に生成 -->
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date1-time" class="required">時間</label>
+                <select id="date1-time" name="date1-time" required>
+                  <option value="">選択</option>
+                  <option value="9:00">9:00</option>
+                  <option value="9:30">9:30</option>
+                  <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第2希望 -->
+          <div class="preference-container">
+            <h4 class="preference-title">第2希望</h4>
+            <div class="form-group date-time-group">
+              <div class="form-control">
+                <label for="date2-year">年</label>
+                <select id="date2-year" name="date2-year">
+                  <option value="">選択</option>
+                  <option value="2025">2025年</option>
+                  <option value="2026">2026年</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date2-month">月</label>
+                <select id="date2-month" name="date2-month">
+                  <option value="">選択</option>
+                  <option value="1">1月</option>
+                  <option value="2">2月</option>
+                  <option value="3">3月</option>
+                  <option value="4">4月</option>
+                  <option value="5">5月</option>
+                  <option value="6">6月</option>
+                  <option value="7">7月</option>
+                  <option value="8">8月</option>
+                  <option value="9">9月</option>
+                  <option value="10">10月</option>
+                  <option value="11">11月</option>
+                  <option value="12">12月</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date2-day">日</label>
+                <select id="date2-day" name="date2-day">
+                  <option value="">選択</option>
+                  <!-- 日付はJavaScriptで動的に生成 -->
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date2-time">時間</label>
+                <select id="date2-time" name="date2-time">
+                  <option value="">選択</option>
+                  <option value="9:00">9:00</option>
+                  <option value="9:30">9:30</option>
+                  <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第3希望 -->
+          <div class="preference-container">
+            <h4 class="preference-title">第3希望</h4>
+            <div class="form-group date-time-group">
+              <div class="form-control">
+                <label for="date3-year">年</label>
+                <select id="date3-year" name="date3-year">
+                  <option value="">選択</option>
+                  <option value="2025">2025年</option>
+                  <option value="2026">2026年</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date3-month">月</label>
+                <select id="date3-month" name="date3-month">
+                  <option value="">選択</option>
+                  <option value="1">1月</option>
+                  <option value="2">2月</option>
+                  <option value="3">3月</option>
+                  <option value="4">4月</option>
+                  <option value="5">5月</option>
+                  <option value="6">6月</option>
+                  <option value="7">7月</option>
+                  <option value="8">8月</option>
+                  <option value="9">9月</option>
+                  <option value="10">10月</option>
+                  <option value="11">11月</option>
+                  <option value="12">12月</option>
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date3-day">日</label>
+                <select id="date3-day" name="date3-day">
+                  <option value="">選択</option>
+                  <!-- 日付はJavaScriptで動的に生成 -->
+                </select>
+              </div>
+              <div class="form-control">
+                <label for="date3-time">時間</label>
+                <select id="date3-time" name="date3-time">
+                  <option value="">選択</option>
+                  <option value="9:00">9:00</option>
+                  <option value="9:30">9:30</option>
+                  <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="back-to-step1" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> 基本情報へ戻る</button>
+            <button type="button" id="go-to-step3" class="btn btn-primary">確認画面へ進む <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- 確認画面 -->
+        <div id="confirmation-section" style="display: none;">
+          <h3 class="section-title">入力内容の確認</h3>
+          <p class="section-intro">入力内容をご確認ください。修正が必要な場合は戻るボタンで戻って修正してください。</p>
+          
+          <div class="confirmation-list">
+            <div class="confirmation-item">
+              <div class="confirmation-label">お名前</div>
+              <div class="confirmation-value" id="confirm-name"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">メールアドレス</div>
+              <div class="confirmation-value" id="confirm-email"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">電話番号</div>
+              <div class="confirmation-value" id="confirm-phone"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">年齢層</div>
+              <div class="confirmation-value" id="confirm-age"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">ご興味のある内容</div>
+              <div class="confirmation-value" id="confirm-interest"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">スキルレベル</div>
+              <div class="confirmation-value" id="confirm-experience"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">相談方法</div>
+              <div class="confirmation-value" id="confirm-type"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">ご質問・ご要望</div>
+              <div class="confirmation-value" id="confirm-message"></div>
+            </div>
+            <div class="confirmation-item">
+              <div class="confirmation-label">希望日時</div>
+              <div class="confirmation-value">
+                <div class="date-preference">
+                  <div class="date-preference-title">第1希望</div>
+                  <div id="confirm-date1"></div>
+                </div>
+                <div class="date-preference" id="date2-container">
+                  <div class="date-preference-title">第2希望</div>
+                  <div id="confirm-date2"></div>
+                </div>
+                <div class="date-preference" id="date3-container">
+                  <div class="date-preference-title">第3希望</div>
+                  <div id="confirm-date3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" id="back-to-step2" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> 日時選択へ戻る</button>
+            <button type="submit" id="submit-form" class="btn btn-primary">予約を確定する <i class="fas fa-check"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer>
+<div class="container">
+  <div class="footer-content">
+    <div class="footer-info">
+      <div class="footer-logo">テックチャレンジ</div>
+      <p class="footer-desc">初心者から上級者まで、あなたのITスキルアップを全力でサポートします。マンツーマン指導で確実にスキルを身につけましょう。</p>
+    </div>
+    
+    <div class="footer-nav">
+      <div class="footer-kids-info">
+        <h4><i class="fas fa-child"></i> 子供向けプログラミング教室も開講中！</h4>
+        <p>小学生・中学生向けのプログラミング教室も運営しています。<br>楽しみながら論理的思考力を身につけるカリキュラムをご用意。</p>
+        <a href="#" class="footer-kids-link">子供向け教室の詳細はこちら <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <a href="reservation-form.html">相談予約フォーム</a> | <a href="privacy-policy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p class="copyright">© 2025 テックチャレンジ | 大人のパソコン&プログラミング教室 All Rights Reserved.</p>
+  </div>
+</div>
+</footer>
+
+<!-- トップへ戻るボタン -->
+<div id="back-to-top" class="back-to-top">
+  <a href="#" aria-label="ページトップへ戻る">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</div>
+
+<script src="script.js"></script>
+<script src="reservation.js"></script>
+</body>
+</html>
